@@ -6,7 +6,7 @@ app.controller("mainController", function($scope,$http){
 
     $scope.sendmail = function(){
         
-        //alert($scope.name+" "+$scope.email+" "+$scope.phone);
+        alert($scope.name+" "+$scope.email+" "+$scope.phone);
         //console.log($scope.username);
     
            $http({
