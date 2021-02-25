@@ -12,7 +12,7 @@ app.controller("mainController", function($scope,$http){
            $http({
              method: 'POST',
              //url: 'http://localhost:3000/emails/', 
-             url: 'http://mdprofessionalservice.com:3000//emails/',
+             url: 'http://mdprofessionalservice.com:3000/emails/',
              data:{
                    name:$scope.name,
                    email:$scope.email,
