@@ -3071,13 +3071,13 @@ h4.v-line-heading:before {
 /* footer
 ================================================== */
 
-.footer-wrap {    background: url(../img/static/footer.jpg) no-repeat center bottom; background-size:cover}
+.footer-wrap {    background: url(../img/static/footer.png) no-repeat center bottom; background-size:cover}
 
 footer {
     padding: 65px 0 ;
     border-top: 0 solid transparent;
     border-top-width: 1px;
-    background: rgba(22, 22, 22, 0.9);
+    
 
 }
 
@@ -3089,7 +3089,7 @@ footer {
 }
 
 footer, footer p {
-    color:rgba(255,255,255,0.5);
+    color:#484646;
     line-height: 21px;
 }
 
@@ -3120,13 +3120,29 @@ footer h4 {
     line-height: 23px; 
     display: inline-block;
     width: auto;
-    color: #fff!important;
+    color: #d29814!important;
 
-        font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #d29814;
     text-transform: uppercase;
     font-weight: bold!important;
+    letter-spacing: 1px;
+}
+
+footer h5 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    font-size: 14px;
+    line-height: 23px; 
+    display: inline-block;
+    width: auto;
+    color: #d29814!important;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #d29814;
     letter-spacing: 1px;
 }
 
@@ -3135,7 +3151,7 @@ footer a {
     /*font-size: 14px !important;*/
 }
 
-footer .widget ul li {border-top:1px rgba(255,255,255,0.2) solid}
+footer .widget ul li {border-top:1px #d29814 solid}
 
 .footer-v2 footer a {
     color: #444;
@@ -4742,7 +4758,7 @@ body .btn-gplus:focus {
     color: #d29814;
     display: block;
     padding-right: 60px;
-    text-decoration: underline;
+   
 }
 
 .bg-construccion{
@@ -4753,4 +4769,35 @@ body .btn-gplus:focus {
     background-position: center;
     background-repeat: no-repeat;
 
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: 1s all;
+    opacity: 0;
+}
+.loading.show {
+    opacity: 1;
+}
+.loading .spin {
+    border: 3px solid hsla(185, 100%, 62%, 0.2);
+    border-top-color: #3cefff;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

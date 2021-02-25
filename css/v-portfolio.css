@@ -36,8 +36,8 @@
 }
 
 .portfolio-grid li a img {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -45,6 +45,8 @@
 }
 
 .portfolio-grid li:hover img {
+    width: 100px;
+    height: 100px;
     -moz-opacity: 0;
     opacity: 0;
     filter: alpha(opacity=0);

@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en-US">
+<html lang="en-US" ng-app="app">
 <head>
 <meta charset="utf-8">
 <title>MD Professional Organizer</title>
@@ -9,6 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Angular Js  -->
+<script src="angular/angular.min.js"></script>
+<script type="text/javascript"  src="controllers/main.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <!-- Web Fonts  -->
 <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700|Montserrat:300,400,500,600,700,800,900|Open+Sans:300,400,400i,600,600i,700,800|Raleway:300,400,400i,500,600,700|Roboto:300,400,400i,500,700,900" rel="stylesheet">
@@ -36,7 +41,12 @@
 <link rel="stylesheet" href="css/custom.css">
 </head>
 
-<body class="home">
+<body class="home" ng-controller="mainController">
+
+  <!-- Loading HTML -->
+<div class="loading show">
+  <div class="spin"></div>
+</div>
 
 <!--Header-->
 
@@ -57,7 +67,7 @@
             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          
   
           </ul>
         </div>
@@ -148,22 +158,23 @@
   <div class="col-sm-4">
     <div class="contact-form">
       <div class="form-group">
-        <label>Nombre</label>
-        <input type="text" placeholder="Nombre Completo">
+        <label>Nombre </label>
+        <input type="text" ng-model="name" placeholder="Nombre Completo">
       </div>
       
       <div class="form-group">
         <label>Email</label>
-        <input type="text" placeholder="ej: john@email.com">
+        <input type="text" ng-model="email" placeholder="ej: john@email.com">
       </div>
       
       <div class="form-group">
         <label>Telefono</label>
-        <input type="text" placeholder="ej: (+01) 382 437">
+        <input type="text" ng-model="phone" placeholder="ej:+01-382437">
       </div>
       <div class="form-group">
-       <input name="Enviar" type="button" value="Enviar" class="get-started-btn">
+       <input name="Enviar" type="button" value="Enviar" class="get-started-btn" ng-click="sendmail()">
       </div>
+
     </div>
      
   </div>
@@ -175,7 +186,7 @@
 </article>
 
 <!-- Libs --> 
-
+<script src="js/preloading.js"></script> 
 <script src="js/jquery-3.1.1.min.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
 <script src="js/jquery.flexslider-min.js"></script> 
