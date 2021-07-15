@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en-US">
+<html lang="en-US" ng-app="app">
 <head>
 <meta charset="utf-8">
 <title>MD Professional Organizer</title>
@@ -9,6 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Angular Js  -->
+<script src="angular/angular.min.js"></script>
+<script type="text/javascript"  src="controllers/main.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <!-- Web Fonts  -->
 <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700|Montserrat:300,400,500,600,700,800,900|Open+Sans:300,400,400i,600,600i,700,800|Raleway:300,400,400i,500,600,700|Roboto:300,400,400i,500,700,900" rel="stylesheet">
@@ -36,7 +41,7 @@
 <link rel="stylesheet" href="css/custom.css">
 </head>
 
-<body class="home">
+<body class="home" ng-controller="mainController">
 
 
 <!--Header-->
@@ -48,7 +53,7 @@
         <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12 pull-left general-font-area">
           <ul class="contact-top">
             <li><i class="fa fa-map-marker" aria-hidden="true"></i> Miami, Fl</li>
-            <li><i class="fa fa-phone" aria-hidden="true"></i> (+1) 786-200-8494</li>
+            <li><i class="fa fa-phone" aria-hidden="true"></i> (+1) 786-200-8494 {{tittle}}</li>
             <li><i class="fa fa-envelope" aria-hidden="true"></i> mdprofessionalorganizer@gmail.com</li>
           </ul>
         </div>
@@ -476,7 +481,7 @@
 </div>
 
 <article class="notice">
-  <div class="container"> <span>puedes contactarnos directamente via Whatsapp</span> <a href="#">Chat Wsp</a> </div>
+  <div class="container"> <span>puedes contactarnos directamente via Whatsapp</span> <a  target="_blank" href="https://api.whatsapp.com/send?phone=017862008494&text=Hola!%Marlyn">Chat WSP</a> </div>
 </article>
 
 
@@ -661,8 +666,9 @@
                      <div class="col-sm-12">
                          <p class="text-svs">
                          </br>
-                             Aliquam erat volutpat. Etiam tortor sapien, elementum quis semper eu, convallis eget justo. Nulla facilisi.
-                             Curabitur cursus vestibulum turpis eget sagittis. Phasellus tempus sodales elementum.
+                         El éxito laboral parte de hacer lo que te apasiona en un ambiente de trabajo óptimo; un equilibrio que garantiza el mejor desempeño de un profesional.</br></br>
+                         Es por ello, que nuestro enfoque es priorizar la armonía del espacio en relación a estaciones de trabajo como también dentro de ellas, cuidando cada detalle y organización de las herramientas utilizadas.
+                         
                          </p>
                      </div>
                  </div>
@@ -678,13 +684,10 @@
                      <div class="col-sm-12">
                          <p class="text-svs">
                          </br>
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam massa quis mauris sollicitudin
-                             commodo venenatis ligula commodo. Sed blandit convallis dignissim. Pellentesque pharetra velit eu velit
-                             elementum et convallis erat vulputate. Sed in nulla ut elit mollis posuere. Praesent a felis accumsan neque
-                             interdum molestie ut id massa. In hac habitasse platea dictumst. Nulla ut lorem ante. In convallis, felis
-                             eget consequat faucibus, mi diam consequat augue, quis porta nibh leo a massa. Sed quam nunc, vulputate vel
-                             imperdiet vel, aliquet sit amet risus. Maecenas nec tempus velit. Praesent gravida mi et mauris sollicitudin
-                             ultricies. Duis molestie quam sem.
+                         Un almacén es un universo de productos, cada uno con diferentes características donde un error de organización puede generar un caos y porque no, hasta perdidas económicas para una empresa.
+                        </br></br>
+                         El tiempo es oro y el orden es eficiencia, por eso es que nuestro trabajo es garantizar una organización óptima para cada producto de tu almacén y de esta manera, mejorar tiempos y esfuerzos de búsqueda.
+                        
                          </p>
                      </div>
                  </div>
@@ -699,11 +702,14 @@
                      <div class="col-sm-12">
                          <p class="text-svs">
                          </br> 
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam massa quis mauris sollicitudin commodo
-                             venenatis ligula commodo. Sed blandit convallis dignissim. Pellentesque pharetra velit eu velit elementum et
-                             convallis erat vulputate. Sed in nulla ut elit mollis posuere. Praesent a felis accumsan neque interdum
-                             molestie ut id massa. In hac habitasse platea dictumst. Praesent gravida mi et mauris sollicitudin ultricies. Duis
-                             molestie quam sem, ac faucibus velit.
+                          <i class="fa fa-check-circle"></i> Localizar en tiempo record los documentos generados y gestionados por la empresa.</br> </br> 
+                          <i class="fa fa-check-circle"></i> Acceder de forma rápida a la información que contienen.</br> </br> 
+                          <i class="fa fa-check-circle"></i> Reduce el costo de mantenimiento y gestión de la documentación. </br> </br> 
+                          <i class="fa fa-check-circle"></i> Optimización del espacio en las instalaciones de la empresa. </br> </br> 
+                          <i class="fa fa-check-circle"></i> Identificar de manera inequívoca las copias y documentos obsoletos, manteniendo bien custodiados los documentos originales.</br> </br> 
+                        
+                         Estas son las grandes ventajas competitivas que aporta nuestro trabajo en la organización de archivos de tu empresa.
+                         
                          </p>
                      </div>
                  </div>
@@ -735,14 +741,15 @@
                 <figure class="animated-overlay overlay-alt">
                   <div class="flexslider thumb-slider">
                     <ul class="slides">
-                      <li> <a href="#" class="link-to-post"> <img alt="Nexus" src='img/works/image1.jpeg' /> </a> </li>
-                      <li> <a href="#" class="link-to-post"> <img alt="Nexus" src='img/works/image1.jpeg' /> </a> </li>
-                      
+                      <li> <a href="" class="link-to-post"> <img alt="MD Works" src='img/works/work1/img1.jpg' /> </a> </li>
+                      <li> <a href="" class="link-to-post"> <img alt="MD Works" src='img/works/work1/img2.jpg' /> </a> </li>
+                      <li> <a href="" class="link-to-post"> <img alt="MD Works" src='img/works/work1/img3.jpg' /> </a> </li>
+                      <li> <a href="" class="link-to-post"> <img alt="MD Works" src='img/works/work1/img4.jpg' /> </a> </li>
                     </ul>
                   </div>
                 </figure>
                 <div class="v-portfolio-item-info">
-                  <h3 class="v-portfolio-item-title"> <a href="portfolio-single.html" class="link-to-post">Organizamos esta cocina</a> </h3>
+                  <h3 class="v-portfolio-item-title"> <a href="" class="link-to-post">Un Closet con estilo y elegancia</a> </h3>
                 </div>
               </div>
 
@@ -751,13 +758,14 @@
                 <figure class="animated-overlay overlay-alt">
                   <div class="flexslider thumb-slider">
                     <ul class="slides">
-                      <li> <a href="#" class="link-to-post"> <img alt="Nexus" src='img/works/3.jpg' /> </a> </li>
-                      <li> <a href="#" class="link-to-post"> <img alt="Nexus" src='img/works/4.jpg' /> </a> </li>
+                      <li> <a href="" class="link-to-post"> <img alt="MD Works" src='img/works/work2/img1.jpg' /> </a> </li>
+                      <li> <a href="" class="link-to-post"> <img alt="MD Works" src='img/works/work2/img2.jpg' /> </a> </li>
+                      <li> <a href="" class="link-to-post"> <img alt="MD Works" src='img/works/work2/img3.jpg' /> </a> </li>
                     </ul>
                   </div>
                 </figure>
                 <div class="v-portfolio-item-info">
-                  <h3 class="v-portfolio-item-title"> <a href="portfolio-single.html" class="link-to-post">Esta Oficina quedo genial</a> </h3>
+                  <h3 class="v-portfolio-item-title"> <a href="" class="link-to-post">Esta Oficina quedo genial</a> </h3>
                 </div>
               </div>
 
@@ -766,13 +774,14 @@
                 <figure class="animated-overlay overlay-alt">
                   <div class="flexslider thumb-slider">
                     <ul class="slides">
-                      <li> <a href="#" class="link-to-post"> <img alt="Nexus" src='img/works/5.jpg' /> </a> </li>
-                      <li> <a href="#" class="link-to-post"> <img alt="Nexus" src='img/works/6.jpg' /> </a> </li>
+                      <li> <a href="" class="link-to-post"> <img alt="MD Works" src='img/works/work3/img1.jpg' /> </a> </li>
+                      <li> <a href="" class="link-to-post"> <img alt="MD Works" src='img/works/work3/img2.jpg' /> </a> </li>
+                      <li> <a href="" class="link-to-post"> <img alt="MD Works" src='img/works/work3/img3.jpg' /> </a> </li>
                     </ul>
                   </div>
                 </figure>
                 <div class="v-portfolio-item-info">
-                  <h3 class="v-portfolio-item-title"> <a href="portfolio-single.html" class="link-to-post">un gran trabjo este almacen</a> </h3>
+                  <h3 class="v-portfolio-item-title"> <a href="" class="link-to-post">un gran trabjo este Archivo</a> </h3>
                 </div>
               </div>
 
@@ -781,46 +790,18 @@
                 <figure class="animated-overlay overlay-alt">
                   <div class="flexslider thumb-slider">
                     <ul class="slides">
-                      <li> <a href="#" class="link-to-post"> <img alt="Nexus" src='img/works/image3.jpeg' /> </a> </li>
-                      <li> <a href="#" class="link-to-post"> <img alt="Nexus" src='img/works/image6.jpeg' /> </a> </li>
+                      <li> <a href="" class="link-to-post"> <img alt="MD Works" src='img/works/work4/img1.jpg' /> </a> </li>
+                      <li> <a href="" class="link-to-post"> <img alt="MD Works" src='img/works/work4/img2.jpg' /> </a> </li>
+                      <li> <a href="" class="link-to-post"> <img alt="MD Works" src='img/works/work4/img3.jpg' /> </a> </li>
                     </ul>
                   </div>
                 </figure>
                 <div class="v-portfolio-item-info">
-                  <h3 class="v-portfolio-item-title"> <a href="portfolio-single.html" class="link-to-post">los closet que deseas</a> </h3>
+                  <h3 class="v-portfolio-item-title"> <a href="" class="link-to-post">¿Qué te parece este almacén? </a> </h3>
                 </div>
               </div>
   
-
-              <div class="item">
-                <figure class="animated-overlay overlay-alt">
-                  <div class="flexslider thumb-slider">
-                    <ul class="slides">
-                      <li> <a href="#" class="link-to-post"> <img alt="Nexus" src='img/works/5.jpg' /> </a> </li>
-                      <li> <a href="#" class="link-to-post"> <img alt="Nexus" src='img/works/6.jpg' /> </a> </li>
-                    </ul>
-                  </div>
-                </figure>
-                <div class="v-portfolio-item-info">
-                  <h3 class="v-portfolio-item-title"> <a href="portfolio-single.html" class="link-to-post">From Sketch To Full Brand</a> </h3>
-                </div>
-              </div>
-
-              <div class="item">
-                <figure class="animated-overlay overlay-alt">
-                  <div class="flexslider thumb-slider">
-                    <ul class="slides">
-                      <li> <a href="#" class="link-to-post"> <img alt="Nexus" src='img/works/3.jpg' /> </a> </li>
-                      <li> <a href="#" class="link-to-post"> <img alt="Nexus" src='img/works/8.jpg' /> </a> </li>
-                    </ul>
-                  </div>
-                </figure>
-                <div class="v-portfolio-item-info">
-                  <h3 class="v-portfolio-item-title"> <a href="portfolio-single.html" class="link-to-post">From Sketch To Full Brand</a> </h3>
-                </div>
-              </div>
-             
-           
+   
       
             </div>
           </div>
