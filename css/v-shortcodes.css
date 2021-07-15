@@ -1841,7 +1841,7 @@ input[type=submit] {
 
 @media (max-width: 768px) {
     .testimonial.bordered-with-thumb .inner {
-      width: 200px;
+      width: 250px;
     }
   }
 
