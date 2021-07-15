@@ -1839,6 +1839,12 @@ input[type=submit] {
 	letter-spacing:0.5px
 }
 
+@media (max-width: 768px) {
+    .testimonial.bordered-with-thumb .inner {
+      width: 200px;
+    }
+  }
+
 .testimonial.bordered-with-thumb .inner:after {
     content: "";
     position: absolute;
